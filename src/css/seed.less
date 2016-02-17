@@ -1,0 +1,156 @@
+@import "seattletimes";
+
+@light: #949ccb;
+@dark: #2a2f5a;
+@red: #b72126;
+@charcoal: #231f20;
+@gray: #c7c8ca;
+
+body {
+  font-family: Lato;
+  color: @charcoal;
+}
+
+.header {
+  background: @light;
+  margin-bottom: 30px;
+
+  .logo {
+    height: 50px;
+    position: absolute;
+    top: 10%;
+    right: 50%;
+  }
+  .splash {
+    max-width: 1300px;
+    margin: auto;
+  }
+}
+
+main {
+  max-width: 1000px;
+  margin: auto;
+
+  .intro {
+    font-weight: bold;
+    text-align: center;
+    font-size: 22px;
+    max-width: 900px;
+    margin: auto;
+    margin-bottom: 30px;
+  }
+
+  .box {
+    border: 2px solid @gray;
+    border-radius: 8px;
+    padding: 25px 40px;
+    max-width: 900px;
+    margin: auto;
+    margin-bottom: 30px;
+
+    .subhed {
+      text-align: center;
+    }
+
+    .problem, .solution {
+      font-weight: 900;
+      font-size: 24px;
+      padding-top: 10px;
+    }
+
+    .button {
+      background: @dark;
+      margin-right: 5px;
+      color: white;
+      font-weight: 900;
+      font-size: 20px;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      display: inline-block;
+      padding: 2px 8px;
+    }
+  }
+
+  .divider {
+    border-top: 2px solid @gray;
+    margin: 25px 0;
+  }
+
+  .subhed {
+    color: @red;
+    font-weight: 900;
+    font-size: 18px;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+  }
+
+  .title {
+    font-weight: 900;
+    font-size: 25px;
+    padding-bottom: 4px;
+  }
+  .chatter {
+    font-size: 16.5px;
+  }
+
+  .respond {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .story {
+    .display-flex();
+    margin-bottom: 30px;
+    width: 80%;
+
+    .left {
+      .flex(3);
+    }
+
+    .right {
+      .flex(5);
+      padding-left: 30px;
+    }
+  }
+
+  .author {
+    margin-bottom: 30px;
+
+    .subhed {
+      text-align: center;
+      padding-bottom: 15px;
+    }
+    .stories {
+      .display-flex();
+
+      .story2 {
+        .flex(1);
+      }
+      .buffer {
+        .flex(0 0 50px);
+      }
+      .title {
+        text-align: center;
+      }
+    }
+  }
+
+  .op-ed {
+    .display-flex();
+    max-width: 900px;
+    margin: auto;
+    margin-bottom: 30px;
+
+    .left, .right {
+      .flex(1);
+    }
+
+    .subhed, .title, .chatter, .right {
+      text-align: center;
+      margin: auto;
+    }
+    .chatter {
+      max-width: 350px;
+    }
+  }
+}
