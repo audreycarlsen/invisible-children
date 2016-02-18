@@ -18,8 +18,16 @@
     <main>
       <div class="intro">Despite our booming economy, homelessness is on the rise. Especially troubling is the number of youths living on the street. How did they end up there, and what can we do to help them? This Opinion project looks in depth at these issues and proposes solutions.</div>
 
-      <%= t.include("./_one.html") %>
-       <%= t.include("./_two.html") %>
+      <div id="one"><%= t.include("./_one.html") %></div>
+      <div id="two"><%= t.include("./_two.html") %></div>
+      <div id="three"><%= t.include("./_three.html") %></div>
+
+      <div class="credits">
+        <div class="subhed">Project credits</div>
+        <div>Writer: Jonathan Martin</div>
+        <div>Editors: Kate Riley and Mark Higgins</div> 
+        <div>Producers: Nikolaj Lasbo and Caitlin Moran</div>
+      </div>
     </main>
 
     <script src="app.js" async></script>
