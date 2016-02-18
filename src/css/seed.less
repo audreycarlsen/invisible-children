@@ -101,15 +101,48 @@ main {
     font-size: 16px;
   }
 
+  .flex-container {
+    .display-flex;
+    margin-bottom: 30px;
+
+    .main-text {
+      .flex(1);
+    }
+    .sidebar {
+      .flex(0 0 200px);
+      border-left: 4px solid @gray;
+      font-weight: bold;
+      font-size: 15px;
+      padding-left: 20px;
+
+      .subhed {
+        padding-bottom: 5px;
+      }
+    }
+  }
+
+  .bubble img {
+    height: 60px;
+  }
+
   .respond {
     text-align: center;
     margin-bottom: 30px;
+
+    .bubble, .text {
+      display: inline-block;
+      vertical-align: top;
+      text-align: left;
+    }
+    .text {
+      padding-left: 15px;
+    }
   }
 
   .story {
     .display-flex();
     margin-bottom: 30px;
-    width: 80%;
+    margin-right: 40px;
 
     .left {
       .flex(3);
