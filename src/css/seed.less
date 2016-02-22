@@ -29,6 +29,14 @@ body {
     max-width: 550px;
     display: inherit;
 
+    @media (max-width: 900px) {
+      max-width: 55%;
+    }
+
+    @media @tablet {
+      margin: auto;
+    }
+
     @media @mobile {
       max-width: 100%;
     }
@@ -40,7 +48,7 @@ body {
     top: 5%;
     left: 50%;
 
-    @media @mobile {
+    @media @tablet {
       position: relative;
       left: 0;
       top: 0
@@ -51,6 +59,14 @@ body {
       font-size: 22px;
       font-weight: bold;
       padding-bottom: 25px;
+
+      @media (max-width: 900px) {
+        font-size: 17px;
+      }
+
+      @media @tablet {
+        padding-bottom: 10px;
+      }
 
       @media @mobile {
         font-size: 15px;
@@ -69,6 +85,10 @@ body {
         padding-top: 10px;
       }
 
+      @media (max-width: 900px) {
+        font-size: 60px;
+      }
+
       @media @mobile {
         font-size: 40px;
         padding-top: 0;
@@ -84,9 +104,18 @@ body {
         padding-top: 10px;
       }
 
+      @media (max-width: 900px) {
+        font-size: 26px;
+        letter-spacing: 0;
+        padding-top: 0;
+      }
+
+      @media @tablet {
+        font-size: 28px;
+      }
+
       @media @mobile {
         font-size: 22px;
-        padding-top: 5px;
         padding-bottom: 5px;
       }
     }
@@ -99,9 +128,17 @@ body {
       height: 45px
     }
 
+    @media (max-width: 900px) {
+      height: 35px;
+    }
+
+    @media @tablet {
+      margin-top: 20px;
+    }
+
     @media @mobile {
       height: 28px;
-      margin-top: 20px;
+      
     }
   }
 }
@@ -127,6 +164,10 @@ main {
   margin: auto;
 
   @media (max-width: 1020px) {
+    margin: 20px;
+  }
+
+  @media @mobile {
     margin: 10px;
   }
 
@@ -150,6 +191,10 @@ main {
     margin: auto;
     margin-top: 50px;
     margin-bottom: 50px;
+
+    @media @tablet {
+      max-width: 650px;
+    }
 
     @media @mobile {
       margin-bottom: 30px;
@@ -230,13 +275,26 @@ main {
 
     .main-text {
       .flex(1);
+
+      @media @tablet {
+        margin-right: 20px;
+      }
+      @media @mobile {
+        margin-right: 0;
+      }
     }
     .sidebar {
       .flex(0 0 200px);
+      .flex-order(99);
       border-left: 4px solid @gray;
       font-weight: bold;
       font-size: 15px;
       padding-left: 20px;
+
+      @media @mobile {
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
 
       .subhed {
         padding-bottom: 5px;
@@ -260,6 +318,21 @@ main {
           padding-bottom: 20px;
         }
       }
+
+      .seemore {
+        font-style: italic;
+        padding-top: 25px;
+        font-weight: 400;
+
+        .arrow {
+          color: @red;
+          font-style: normal;
+        }
+
+        a {
+          color: @charcoal;
+        }
+      }
     }
   }
 
@@ -271,7 +344,7 @@ main {
     text-align: center;
     margin-bottom: 50px;
 
-    @media @mobile {
+    @media @tablet {
       text-align: left;
       margin-bottom: 30px;
     }
@@ -284,7 +357,7 @@ main {
     .text {
       padding-left: 15px;
 
-      @media @mobile {
+      @media @tablet {
         padding-left: 0;
       }
     }
@@ -295,7 +368,7 @@ main {
     margin-bottom: 50px;
     margin-right: 40px;
 
-    @media @mobile {
+    @media @tablet {
       display: block;
       margin-right: 0;
       margin-bottom: 30px;
@@ -315,7 +388,7 @@ main {
       position: relative;
       margin-left: 40px;
 
-      @media @mobile {
+      @media @tablet {
         margin-left: 0;
         margin-bottom: 5px;
       }
@@ -352,6 +425,12 @@ main {
 
       .story2 {
         .flex(1);
+
+        @media @mobile {
+          &:first-child {
+            padding-bottom: 25px;
+          }
+        }
       }
       .buffer {
         .flex(0 0 50px);
@@ -359,6 +438,16 @@ main {
       .title {
         text-align: center;
         padding-top: 10px;
+
+        @media @mobile {
+          padding-top: 5px;
+        }
+      }
+    }
+
+    @media @tablet {
+      .title {
+        font-size: 20px;
       }
     }
   }
@@ -376,7 +465,7 @@ main {
     img {
       max-width: 291px;
 
-      @media @mobile {
+      @media @tablet {
         max-width: 100%;
       }
     }
@@ -384,12 +473,27 @@ main {
     .left, .right {
       .flex(1);
     }
+    .left {
+      @media @tablet {
+        padding-right: 20px;
+      }
+    }
     .right {
       .flex-order(99);
     }
     .subhed, .title, .chatter, .right {
       text-align: center;
       margin: auto;
+    }
+
+    @media @tablet {
+      .title {
+        font-size: 20px;
+      }
+
+      .subhed {
+        padding-top: 5px;
+      }
     }
   }
 
