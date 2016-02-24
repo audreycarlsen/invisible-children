@@ -11,6 +11,8 @@
   </head>
   <body>
 
+    <%= t.include("partials/_ad.html", { type: "banner" }) %>
+
     <div class="header">
       <div class="title-text">
         <a href="http://www.seattletimes.com"><img class="logo" src="./assets/st-logo.png"></a>
@@ -37,6 +39,8 @@
     </main>
 
     <div class="copyright">Copyright &copy; 2016 The Seattle Times</div>
+
+    <div class="ad-bottom"><%= t.include("partials/_ad.html", { type: "bannerBottom" }) %></div>
 
     <footer>
       <a class="logo" href="http://www.seattletimes.com">

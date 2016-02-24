@@ -16,6 +16,7 @@ body {
 .header {
   background: @light;
   margin-bottom: 30px;
+  position: relative;
 
   @media @mobile {
     margin-bottom: 20px;
@@ -45,7 +46,7 @@ body {
   .title-text {
     position: absolute;
     text-align: center;
-    top: 5%;
+    top: 10%;
     left: 50%;
 
     @media @tablet {
@@ -172,10 +173,8 @@ main {
   }
 
   .intro {
-    font-weight: bold;
     text-align: center;
-    font-size: 22px;
-    max-width: 900px;
+    font-size: 24px;
     margin: auto;
 
     @media @mobile {
@@ -204,6 +203,12 @@ main {
 
     .subhed {
       text-align: center;
+
+      @media @mobile {
+        &:last-child {
+          padding-top: 10px;
+        }
+      }
     }
 
     .problem, .solution {
@@ -213,6 +218,15 @@ main {
 
       @media @mobile {
         font-size: 18px;
+      }
+    }
+
+    .problem {
+      padding-top: 20px;
+      padding-bottom: 40px;
+
+      @media @mobile {
+        padding-bottom: 30px;
       }
     }
 
@@ -393,6 +407,10 @@ main {
         margin-bottom: 5px;
       }
 
+      img {
+        width: 100%;
+      }
+
       .inner {
         height: 0;
         padding-bottom: percentage(9 / 16);
@@ -411,6 +429,10 @@ main {
 
   .author {
     margin-bottom: 50px;
+
+    img {
+      width: 100%;
+    }
 
     .subhed {
       text-align: center;
@@ -532,5 +554,11 @@ footer {
     clear: both;
     content: " ";
     display: block;
+  }
+}
+
+.ad-bottom {
+  @media (max-width: 760px) {
+    display: none;
   }
 }

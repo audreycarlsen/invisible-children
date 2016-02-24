@@ -5,8 +5,8 @@
       "path": "youth-homelessness"
     },
     "live": {
-      "bucket": "",
-      "path": ""
+      "bucket": "projects.seattletimes.com",
+      "path": "2016/invisible-children"
     }
   },
   "title": "",
@@ -16,6 +16,6 @@
   "tags": [],
   "image": "assets/social.jpg",
   "sheets": [],
-  "production": false,
+  "production": true,
   "embedded": true
 }
